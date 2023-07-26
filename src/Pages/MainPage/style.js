@@ -10,8 +10,8 @@ export const Container = styled.div`
   width: 600px;
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 `;
 export const TitleContainer = styled.div`
@@ -24,11 +24,41 @@ export const TitleContainer = styled.div`
   justify-content: center;
 `;
 export const Title = styled.h1`
-  font-family: "HSSaemaul-Regular";
+  font-family: "DungGeunMo";
   font-size: 60px;
   color: white;
-  text-shadow: 10px 10px 10px #f2f2f2;
-  -webkit-text-stroke-width: 0.1px;
-  -webkit-text-stroke-color: gray;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #628eff;
   text-align: center;
+`;
+export const ContentBox = styled.div`
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+export const Button = styled.button`
+  font-family: "DungGeunMo";
+  font-size: 30px;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  line-height: 1.4;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+  min-height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #628eff;
+  border-color: #000000;
+  flex-direction: column;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 `;

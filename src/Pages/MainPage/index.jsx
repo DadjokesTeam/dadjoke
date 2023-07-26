@@ -1,20 +1,16 @@
 import * as S from "./style";
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 const Main = () => {
   return (
     <S.Main>
       <S.Container>
-        <Card>
-          <CardHeader />
-          <CardBody>
-            <S.Title>
-              아재개그 세상에 <br />
-              오신것을 환영합니다!
-            </S.Title>
-          </CardBody>
-          <CardFooter />
-        </Card>
-        <img src="https://item.kakaocdn.net/do/35d21721120852d73f512b9bc17f36689f5287469802eca457586a25a096fd31" />
+        <S.ContentBox>
+          <S.Title>아재개그 테스트</S.Title>
+          <img src="https://3.bp.blogspot.com/-vhleHc_Y0l8/WDwIGr1Um6I/AAAAAAALmww/1n6-7t8Am3Y3Y7NG5nQtQ6TGD4N5Ah3EgCLcB/s1600/AS001885_00.gif" />
+          <Link to="/select">
+            <S.Button>시작하기</S.Button>
+          </Link>
+        </S.ContentBox>
       </S.Container>
     </S.Main>
   );

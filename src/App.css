@@ -6,9 +6,9 @@
 }
 
 @font-face {
-  font-family: "HSSaemaul-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff")
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
     format("woff");
-  font-style: bold;
   font-weight: normal;
+  font-style: normal;
 }
