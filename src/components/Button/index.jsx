@@ -1,5 +1,5 @@
 import * as S from "./style";
-const Button = () => {
-  return <S.Button>하이 ㅋㅋ</S.Button>;
+const Button = (props) => {
+  return <S.Button>{props.content}</S.Button>;
 };
 export default Button;
