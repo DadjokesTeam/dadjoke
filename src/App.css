@@ -4,3 +4,11 @@
   margin: 0;
   text-decoration: none;
 }
+
+@font-face {
+  font-family: "HSSaemaul-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff")
+    format("woff");
+  font-style: bold;
+  font-weight: normal;
+}
