@@ -9,7 +9,7 @@ const Select = () => {
       <S.SelectTitle>원하시는 게임을 선택해주세요!</S.SelectTitle>
       <img src="https://noiseandkisses.com/apps/note/wp-content/uploads/2023/03/menu_cinamon.png" />
       <S.ButtonContainer>
-        <Link to="/quiz-select">
+        <Link to="/quiz">
           <Button content="아재개그 퀴즈 하기" />
         </Link>
         <S.SelectMessage>or</S.SelectMessage>
