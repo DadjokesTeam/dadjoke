@@ -1,0 +1,40 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  width: 600px;
+  height: 100vh;
+  background-color: #81bef7;
+`;
+
+export const MainTitle = styled.h2`
+  font-size: 3.5vh;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+`;
+
+export const Score = styled.h1`
+  font-size: 15vh;
+  text-align: center;
+  color: #000;
+`;
+
+export const Congratuation = styled.div`
+  color: #000;
+  font-size: 8vh;
+`;
+export const MedalTitle = styled.div`
+  font-weight: 300;
+  font-size: 1.6vh;
+  margin-bottom: 2vh;
+`;
+
+export const Medal = styled.div`
+  font-size: 10vh;
+`;
