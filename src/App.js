@@ -1,10 +1,13 @@
 import "./App.css";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import * as P from "./Pages";
 function App() {
   return (
-    <header>
-      <h1>하이 ㅋㅋ</h1>
-    </header>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<P.Main />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
