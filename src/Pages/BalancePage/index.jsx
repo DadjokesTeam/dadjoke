@@ -1,5 +1,4 @@
 import * as S from './style';
-import * as C from '../../components';
 import data from '../../data/balance.json';
 import { useParams, useNavigate } from 'react-router-dom';
 
@@ -25,7 +24,7 @@ const Balance = () => {
           .filter(({ id }) => id === Number(params.id))
           .map(({ desc, option1, option2, answer, id }) => {
             return (
-              <>
+              <S.ContentContainer key={id}>
                 <S.Title>{desc}</S.Title>
                 <S.OptionContainer>
                   <S.Option onClick={() => checkAnswer(option1, answer, id)}>
@@ -36,7 +35,7 @@ const Balance = () => {
                     {option2}
                   </S.Option>
                 </S.OptionContainer>
-              </>
+              </S.ContentContainer>
             );
           })}
       </S.Container>

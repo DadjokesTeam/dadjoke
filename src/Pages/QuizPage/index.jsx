@@ -39,7 +39,7 @@ const Quiz = () => {
           .filter(({ id }) => id === Number(params.quizId))
           .map(({ id, desc, level, hint, answer }) => {
             return (
-              <S.QuizContainer>
+              <S.QuizContainer key={id}>
                 <S.Title>
                   <S.Level>Level {level}</S.Level>
                   <br />
