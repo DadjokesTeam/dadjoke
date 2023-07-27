@@ -29,6 +29,13 @@ export const Score = styled.div`
   top: 200px;
 `;
 
+export const Chance = styled.div`
+  font-size: 50px;
+  font-family: "DungGeunMo";
+  position: absolute;
+  top: 160px;
+`;
+
 export const ImgPicker = styled.div`
   width: inherit;
   height: 400px;
