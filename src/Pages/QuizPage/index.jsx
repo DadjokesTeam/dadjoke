@@ -11,6 +11,7 @@ const Quiz = () => {
   const [showHint, setShowHint] = useState(false);
   const [input, setInput] = useState('');
   const clickHint = () => setShowHint((prev) => !prev);
+  const [score, setScore] = useState(0);
 
   const checkAnswer = ({ answer }) => {
     if (answer === input) {
@@ -26,7 +27,9 @@ const Quiz = () => {
             : Number(params.quizId) + 1
         }`
       );
-    } else alert('틀렸습니다');
+      setScore((prevScore) => prevScore + 2);
+      window.localStorage.setItem("quizScore", score);
+    } else alert("틀렸습니다");
     setShowHint(false);
     setInput('');
   };
@@ -41,6 +44,7 @@ const Quiz = () => {
             return (
               <S.QuizContainer key={id}>
                 <S.Title>
+                  점수 : {score}
                   <S.Level>Level {level}</S.Level>
                   <br />
                   {id}. {desc}

@@ -4,7 +4,7 @@ import { Button } from '../../components';
 import { Link } from 'react-router-dom';
 
 const Score = ({ subject }) => {
-  const [score, setScore] = useState(0);
+  const score = window.localStorage.getItem("quizScore");
 
   return (
     <S.Container>

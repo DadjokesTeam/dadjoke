@@ -20,7 +20,7 @@ const COLOR_CODES = {
   },
 };
 
-const TIME_LIMIT = 6;
+const TIME_LIMIT = 300;
 
 const Timer = () => {
   const [timeLeft, setTimeLeft] = useState(TIME_LIMIT);
