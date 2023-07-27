@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as S from "./style";
+import { useNavigate } from "react-router-dom";
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
@@ -19,13 +20,15 @@ const COLOR_CODES = {
   },
 };
 
-const TIME_LIMIT = 60;
+const TIME_LIMIT = 6;
 
 const Timer = () => {
   const [timeLeft, setTimeLeft] = useState(TIME_LIMIT);
   const [remainingPathColor, setRemainingPathColor] = useState(
     COLOR_CODES.info.color
   );
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     let animationFrameId;
@@ -47,6 +50,7 @@ const Timer = () => {
       } else {
         onTimesUp();
         alert("Time's up!");
+        navigate("/score");
       }
     };
 

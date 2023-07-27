@@ -2,7 +2,9 @@ import * as S from "./style";
 import { Correct } from "../../components";
 import { Counter } from "../../components";
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 const PicturePage = () => {
+  const navigate = useNavigate();
   const correct = [
     { component: Correct, id: 1 },
     { component: Correct, id: 2 },
@@ -39,6 +41,7 @@ const PicturePage = () => {
     setChance((prev) => prev - 1);
     if (chance === 0) {
       alert("모든 기회가 소진되었습니다");
+      navigate("/score");
     }
   };
   return (
