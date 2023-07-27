@@ -21,6 +21,12 @@ export const Title = styled.h1`
   text-align: center;
 `;
 
+export const ImgTitle = styled.h4`
+  color: lightgray;
+  margin-bottom: 1vh;
+
+`;
+
 export const ImgContainer = styled.div`
   display: flex;
   justify-content: center;

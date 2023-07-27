@@ -17,12 +17,13 @@ const HumanQuiz = () => {
     "변도진.jpg",
     "최민욱.png",
     "김종한.jpg",
+    "양승권.jpg",
     "오영기.png",
   ];
 
   const checkAnswer = ({ answer }) => {
     if (answer === input) {
-      if (params.humanNum === "7") {
+      if (params.humanNum === "8") {
         return navigate("/score");
       }
       navigate(`/human/${Number(params.humanNum) + 1}`);
@@ -51,10 +52,11 @@ const HumanQuiz = () => {
           <img
             src={currentImage}
             alt={currentImage}
-            style={{ height: "100%", width: "100%", objectFit: "contain" }}
+            style={{ width: "300px", height: "300px", objectFit: "fill" }}
           />
         )}
       </S.ImgContainer>
+      <S.ImgTitle> 대부분의 사진은 허락을 받지 않았습니다 ^^ </S.ImgTitle>
       <S.InputContainer>
         <Input
           value={input}
