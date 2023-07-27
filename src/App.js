@@ -10,6 +10,7 @@ function App() {
         <Route path="/quiz" element={<P.QuizSelect />} />
         <Route path="/select" element={<P.Select />} />
         <Route path="/picture" element={<P.PicturePage />} />
+        <Route path="/quiz/:levelId/:quizId" element={<P.Quiz />} />
       </Routes>
     </BrowserRouter>
   );

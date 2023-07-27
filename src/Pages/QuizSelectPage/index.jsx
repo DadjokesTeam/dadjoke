@@ -1,6 +1,7 @@
 import * as S from './style';
 import * as C from '../../components';
 import { Link } from 'react-router-dom';
+
 const Quiz = () => {
   const arr = [
     { id: 1, content: 'level 1' },
@@ -15,7 +16,7 @@ const Quiz = () => {
         <S.ButtonContainer>
           {arr.map(({ id, content }) => {
             return (
-              <Link to={`level/${id}`}>
+              <Link to={`/quiz/${id}/1`}>
                 <C.Button content={content} />
               </Link>
             );
