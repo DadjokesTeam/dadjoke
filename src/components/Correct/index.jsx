@@ -3,13 +3,13 @@ import * as S from "./style";
 
 const Correct = (props) => {
   const [isVisible, setIsVisible] = useState(true);
-  const [backgroundColor, setBackgroundColor] = useState(""); // Default background color (white)
+  const [backgroundColor, setBackgroundColor] = useState("");
 
   const handleClick = () => {
     alert("정답입니다 !");
     setIsVisible(false);
-    setBackgroundColor("red"); // Change the background color to green (you can use any color you want)
-    props.onCorrectClick(props.id); // Use the onCorrectClick prop instead of onScoreUpdate
+    setBackgroundColor("red");
+    props.onCorrectClick(props.id);
   };
 
   return (
@@ -17,7 +17,7 @@ const Correct = (props) => {
       <S.Correct
         onClick={handleClick}
         className={props.className}
-        style={{ backgroundColor: backgroundColor }} // Set the background color dynamically
+        style={{ backgroundColor: backgroundColor }}
       ></S.Correct>
     </div>
   );

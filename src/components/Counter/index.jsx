@@ -49,7 +49,7 @@ const Timer = () => {
         animationFrameId = requestAnimationFrame(() => startTimer(startTime));
       } else {
         onTimesUp();
-        alert("Time's up!");
+        alert("시간이 초과되었어요!");
         navigate("/score");
       }
     };

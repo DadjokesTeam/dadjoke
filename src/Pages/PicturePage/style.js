@@ -17,7 +17,6 @@ export const Container = styled.div`
 
 export const ImgContainer = styled.div`
   width: inherit;
-  background-color: pink;
   height: 400px;
 `;
 

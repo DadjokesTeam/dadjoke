@@ -6,10 +6,10 @@ export const Counter = styled.div`
   height: 100vh;
   place-items: center;
   position: absolute;
-  right: 700px;
-  bottom: 300px;
+  right: 1000px;
+  bottom: -300px;
   .base-timer {
-    position: relative;
+    position: absolute;
     width: 100px;
     height: 100px;
   }
