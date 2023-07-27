@@ -26,7 +26,7 @@ export const SelectTitle = styled.h3`
 `;
 
 export const ButtonContainer = styled.div`
-  margin-top: 20px;
+  margin-top: 40px;
 `;
 
 export const SelectMessage = styled.h6`
