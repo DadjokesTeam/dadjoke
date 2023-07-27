@@ -28,8 +28,20 @@ const Quiz = () => {
         }`
       );
       setScore((prevScore) => prevScore + 2);
-      window.localStorage.setItem("quizScore", score);
-    } else alert("틀렸습니다");
+      window.localStorage.setItem('quizScore', score);
+    } else {
+      alert('틀렸습니다');
+      navigate(
+        `/quiz/${
+          params.quizId === '10' ? Number(params.levelId) + 1 : params.levelId
+        }/${
+          params.quizId === '10'
+            ? (params.quizId = '1')
+            : Number(params.quizId) + 1
+        }`
+      );
+    }
+
     setShowHint(false);
     setInput('');
   };
@@ -65,7 +77,7 @@ const Quiz = () => {
                 </S.InputContainer>
                 <Button
                   width="100px"
-                  height="60px"
+                  height="40px"
                   fontSize="20px"
                   content="힌트"
                   onClick={clickHint}

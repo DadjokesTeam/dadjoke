@@ -54,7 +54,7 @@ export const InputContainer = styled.div`
 
 export const Hint = styled.p`
   position: absolute;
-  bottom: 200px;
+  bottom: 160px;
   font-family: 'DungGeunMo';
   font-size: 32px;
   color: white;
