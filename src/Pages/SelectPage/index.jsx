@@ -26,12 +26,21 @@ const Select = () => {
           />
         </Link>
         <S.SelectMessage>or</S.SelectMessage>
-        <Link to="/">
+        <Link to="/balance/1">
           <Button
             width="320px"
             height="100px"
             fontSize="30px"
-            content="양자택일 게임"
+            content="밸런스 게임"
+          />
+        </Link>
+        <S.SelectMessage>or</S.SelectMessage>
+        <Link to="/human/1">
+          <Button
+            width="320px"
+            height="100px"
+            fontSize="30px"
+            content="우리학교 인물퀴즈"
           />
         </Link>
       </S.ButtonContainer>
