@@ -24,30 +24,14 @@ const HumanQuiz = () => {
     "오영기.png",
   ];
 
-  const answers = [
-    ["김민재"],
-    ["김원욱"],
-    ["전예빈"],
-    ["이현준", "김종한", "이현준 김종한"],
-    ["변도진"],
-    ["이태훈"],
-    ["최민욱"],
-    ["정민서", "서주미", "정민서 서주미"],
-    ["양승권", "알감자"],
-    ["이정우"],
-    ["오영기"],
-  ];
-
-  const checkAnswer = () => {
-    if (answers[params.humanNum - 1].includes(input)) {
-      if (params.humanNum === "11") {
+  const checkAnswer = ({ answer }) => {
+    if (answer === input) {
+      alert("정답입니다!");
+      if (params.humanNum === "8") {
         return navigate("/score");
       }
       navigate(`/human/${Number(params.humanNum) + 1}`);
-    } else {
-      console.log(answers[params.humanNum - 1]);
     }
-
     setInput("");
   };
 
@@ -81,6 +65,12 @@ const HumanQuiz = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="정답을 입력해주세요"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              checkAnswer();
+            }
+          }}
         />
         <Button
           width="100px"

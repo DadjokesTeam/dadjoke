@@ -7,7 +7,6 @@ export const PicturePage = styled.div`
 `;
 
 export const Container = styled.div`
-  background-color: #81bef7;
   width: 800px;
   height: 100vh;
   display: flex;

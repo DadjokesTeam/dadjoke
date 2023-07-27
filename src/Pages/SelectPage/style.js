@@ -9,7 +9,6 @@ export const Container = styled.div`
   margin: 0 auto;
   width: 800px;
   height: 100vh;
-  background-color: #81bef7;
 
   img {
     width: 300px;
@@ -18,10 +17,8 @@ export const Container = styled.div`
 
 export const SelectTitle = styled.h3`
   font-family: "DungGeunMo";
-  font-size: 35px;
-  color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #628eff;
+  font-size: 50px;
+  color: black;
   text-align: center;
 `;
 

@@ -1,49 +1,50 @@
-import * as S from './style';
-import data from '../../data/data.json';
-import { Input } from '@chakra-ui/react';
-import { Button } from '../../components';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useState } from 'react';
+import * as S from "./style";
+import data from "../../data/data.json";
+import { Input } from "@chakra-ui/react";
+import { Button } from "../../components";
+import { useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
 
 const Quiz = () => {
   const navigate = useNavigate();
   const params = useParams();
   const [showHint, setShowHint] = useState(false);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const clickHint = () => setShowHint((prev) => !prev);
   const [score, setScore] = useState(0);
 
   const checkAnswer = ({ answer }) => {
     if (answer === input) {
-      if (params.levelId === '3' && params.quizId === '10') {
-        return navigate('/score');
+      alert("정답입니다!");
+      if (params.levelId === "3" && params.quizId === "10") {
+        return navigate("/score");
       }
       navigate(
         `/quiz/${
-          params.quizId === '10' ? Number(params.levelId) + 1 : params.levelId
+          params.quizId === "10" ? Number(params.levelId) + 1 : params.levelId
         }/${
-          params.quizId === '10'
-            ? (params.quizId = '1')
+          params.quizId === "10"
+            ? (params.quizId = "1")
             : Number(params.quizId) + 1
         }`
       );
       setScore((prevScore) => prevScore + 2);
-      window.localStorage.setItem('quizScore', score);
+      window.localStorage.setItem("quizScore", score);
     } else {
-      alert('틀렸습니다');
+      alert("틀렸습니다");
       navigate(
         `/quiz/${
-          params.quizId === '10' ? Number(params.levelId) + 1 : params.levelId
+          params.quizId === "10" ? Number(params.levelId) + 1 : params.levelId
         }/${
-          params.quizId === '10'
-            ? (params.quizId = '1')
+          params.quizId === "10"
+            ? (params.quizId = "1")
             : Number(params.quizId) + 1
         }`
       );
     }
 
     setShowHint(false);
-    setInput('');
+    setInput("");
   };
 
   return (
@@ -66,6 +67,12 @@ const Quiz = () => {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder="정답을 입력해주세요"
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        checkAnswer({ answer });
+                      }
+                    }}
                   />
                   <Button
                     width="80px"

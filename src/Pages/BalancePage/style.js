@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Main = styled.div`
   width: 100vw;
@@ -7,7 +7,6 @@ export const Main = styled.div`
   justify-content: center;
 `;
 export const Container = styled.div`
-  background-color: #81bef7;
   width: 800px;
   height: 100vh;
   display: flex;
@@ -16,14 +15,18 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: 'DungGeunMo';
+  font-family: "DungGeunMo";
   width: 400px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 32px;
-  color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #628eff;
+  color: black;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 350px;
+  border: 3px solid black;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 `;
 
 export const ContentContainer = styled.div`
@@ -42,14 +45,14 @@ export const OptionContainer = styled.div`
   .vs {
     font-size: 60px;
     font-weight: 700;
-    color: #fff;
+    color: black;
+    font-family: "DungGeunMo";
   }
 `;
 
 export const Option = styled.div`
-  width: 200px;
+  width: 250px;
   height: 300px;
-  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,4 +60,14 @@ export const Option = styled.div`
   font-size: 30px;
   font-weight: 600;
   cursor: pointer;
+  font-family: "DungGeunMo";
+  border: 3px solid black;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  color: white;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+  &:hover {
+    color: black;
+    transition: all 0.3s;
+  }
 `;

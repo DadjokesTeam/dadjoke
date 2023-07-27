@@ -9,22 +9,19 @@ export const Container = styled.div`
   margin: 0 auto;
   width: 800px;
   height: 100vh;
-  background-color: #81bef7;
 `;
 
 export const Title = styled.h1`
   font-family: "DungGeunMo";
   font-size: 35px;
-  color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #628eff;
+  color: black;
+
   text-align: center;
 `;
 
 export const ImgTitle = styled.h4`
   color: lightgray;
   margin-bottom: 1vh;
-
 `;
 
 export const ImgContainer = styled.div`
