@@ -26,6 +26,11 @@ export const Title = styled.h1`
   margin-top: 150px;
 `;
 
+export const ContentContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const OptionContainer = styled.div`
   position: absolute;
   display: flex;
