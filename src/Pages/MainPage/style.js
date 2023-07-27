@@ -7,7 +7,7 @@ export const Main = styled.div`
 `;
 export const Container = styled.div`
   background-color: #81bef7;
-  width: 600px;
+  width: 800px;
   height: 100vh;
   display: flex;
   justify-content: center;

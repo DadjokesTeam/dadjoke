@@ -8,6 +8,7 @@ function App() {
         <Route path="/" element={<P.Main />} />
         <Route path="/score" element={<P.Score />} />
         <Route path="/select" element={<P.Select />} />
+        <Route path="/picture" element={<P.PicturePage />} />
       </Routes>
     </BrowserRouter>
   );
