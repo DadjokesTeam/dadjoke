@@ -9,7 +9,6 @@ export const Container = styled.div`
   margin: 0 auto;
   width: 600px;
   height: 100vh;
-  background-color: #81bef7;
 `;
 
 export const MainTitle = styled.h2`
@@ -23,6 +22,7 @@ export const Score = styled.h1`
   font-size: 15vh;
   text-align: center;
   color: #000;
+  font-family: "DungGeunMo";
 `;
 
 export const Congratuation = styled.div`

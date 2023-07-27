@@ -1,4 +1,4 @@
-import * as S from './style';
+import * as S from "./style";
 const Button = (props) => {
   return (
     <S.Button
@@ -6,6 +6,7 @@ const Button = (props) => {
       height={props.height}
       fontSize={props.fontSize}
       onClick={props.onClick}
+      onKeyDown={props.onKeyDown}
     >
       {props.content}
     </S.Button>

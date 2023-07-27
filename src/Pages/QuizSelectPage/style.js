@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Main = styled.div`
   width: 100vw;
@@ -7,7 +7,6 @@ export const Main = styled.div`
   justify-content: center;
 `;
 export const Container = styled.div`
-  background-color: #81bef7;
   width: 600px;
   height: 100vh;
   display: flex;
@@ -18,11 +17,9 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: 'DungGeunMo';
+  font-family: "DungGeunMo";
   font-size: 40px;
-  color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #628eff;
+  color: black;
   text-align: center;
 `;
 

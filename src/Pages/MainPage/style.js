@@ -6,13 +6,13 @@ export const Main = styled.div`
   justify-content: center;
 `;
 export const Container = styled.div`
-  background-color: #81bef7;
   width: 800px;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-shadow: 1px 2px 0px black;
 `;
 export const TitleContainer = styled.div`
   width: 500px;
@@ -28,7 +28,7 @@ export const Title = styled.h1`
   font-size: 60px;
   color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #628eff;
+  -webkit-text-stroke-color: black;
   text-align: center;
 `;
 export const ContentBox = styled.div`

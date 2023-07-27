@@ -7,7 +7,6 @@ export const PicturePage = styled.div`
 `;
 
 export const Container = styled.div`
-  background-color: #81bef7;
   width: 800px;
   height: 100vh;
   display: flex;
@@ -18,7 +17,6 @@ export const Container = styled.div`
 
 export const ImgContainer = styled.div`
   width: inherit;
-  background-color: pink;
   height: 400px;
 `;
 

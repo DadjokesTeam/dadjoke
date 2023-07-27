@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button } from '../../components';
-import { Link } from 'react-router-dom';
-import * as S from './style';
+import React from "react";
+import { Button } from "../../components";
+import { Link } from "react-router-dom";
+import * as S from "./style";
 
 const Select = () => {
   return (
@@ -13,7 +13,7 @@ const Select = () => {
             width="320px"
             height="100px"
             fontSize="30px"
-            content="아재개그 퀴즈 하기"
+            content="아재개그 퀴즈"
           />
         </Link>
         <S.SelectMessage>or</S.SelectMessage>
@@ -22,7 +22,7 @@ const Select = () => {
             width="320px"
             height="100px"
             fontSize="30px"
-            content="틀린그림찾기 하기"
+            content="틀린그림찾기"
           />
         </Link>
         <S.SelectMessage>or</S.SelectMessage>
