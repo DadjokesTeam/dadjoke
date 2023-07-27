@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import * as S from "./style";
-import { Button } from "../../components";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import * as S from './style';
+import { Button } from '../../components';
+import { Link } from 'react-router-dom';
 
 const Score = ({ subject }) => {
   const [score, setScore] = useState(0);
@@ -21,7 +21,12 @@ const Score = ({ subject }) => {
       <S.MedalTitle>당신이 받은 메달입니다! 축하드려요</S.MedalTitle>
 
       <Link to="/">
-        <Button content="처음으로 돌아가기" />
+        <Button
+          width="300px"
+          height="100px"
+          fontSize="30px"
+          content="처음으로 돌아가기"
+        />
       </Link>
     </S.Container>
   );
