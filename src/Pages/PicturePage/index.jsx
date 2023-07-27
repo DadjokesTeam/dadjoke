@@ -1,7 +1,7 @@
 import * as S from "./style";
 import { Correct } from "../../components";
 import { Counter } from "../../components";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const PicturePage = () => {
   const navigate = useNavigate();

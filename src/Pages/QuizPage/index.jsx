@@ -1,34 +1,33 @@
-import * as S from './style';
-import * as C from '../../components';
-import data from '../../data/data.json';
-import { Input } from '@chakra-ui/react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useState } from 'react';
+import * as S from "./style";
+import data from "../../data/data.json";
+import { Input } from "@chakra-ui/react";
+import { useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
 
 const Quiz = () => {
   const navigate = useNavigate();
   const params = useParams();
   const [showHint, setShowHint] = useState(false);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const clickHint = () => setShowHint((prev) => !prev);
 
   const checkAnswer = ({ answer }) => {
     if (answer === input) {
-      if (params.levelId === '3' && params.quizId === '10') {
-        return navigate('/score');
+      if (params.levelId === "3" && params.quizId === "10") {
+        return navigate("/score");
       }
       navigate(
         `/quiz/${
-          params.quizId === '10' ? Number(params.levelId) + 1 : params.levelId
+          params.quizId === "10" ? Number(params.levelId) + 1 : params.levelId
         }/${
-          params.quizId === '10'
-            ? (params.quizId = '1')
+          params.quizId === "10"
+            ? (params.quizId = "1")
             : Number(params.quizId) + 1
         }`
       );
-    } else alert('틀렸습니다');
+    } else alert("틀렸습니다");
     setShowHint(false);
-    setInput('');
+    setInput("");
   };
 
   return (

@@ -23,7 +23,6 @@ const Score = ({ subject }) => {
       <Link to="/">
         <Button content="처음으로 돌아가기" />
       </Link>
-
     </S.Container>
   );
 };
