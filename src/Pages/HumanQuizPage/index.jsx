@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Input } from "@chakra-ui/react";
-import * as S from "./style";
 import { useNavigate, useParams } from "react-router-dom";
+import { Input } from "@chakra-ui/react";
+import { Button } from '../../components';
+import * as S from "./style";
 
 const HumanQuiz = () => {
   const navigate = useNavigate();
@@ -63,7 +64,13 @@ const HumanQuiz = () => {
           onChange={(e) => setInput(e.target.value)}
           placeholder="정답을 입력해주세요"
         />
-        <S.Button onClick={() => checkAnswer({ answer })}>입력</S.Button>
+        <Button
+          width="100px"
+          height="50px"
+          fontSize="20px"
+          content="확인"
+          onClick={() => checkAnswer({ answer })}
+        />
       </S.InputContainer>
     </S.Container>
   );
