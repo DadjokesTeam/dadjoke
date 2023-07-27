@@ -4,3 +4,5 @@ export { default as QuizSelect } from './QuizSelectPage';
 export { default as Select } from './SelectPage';
 export { default as PicturePage } from './PicturePage';
 export { default as Quiz } from './QuizPage';
+export { default as Balance } from './BalancePage';
+export { default as HumanQuiz } from "./HumanQuizPage";
