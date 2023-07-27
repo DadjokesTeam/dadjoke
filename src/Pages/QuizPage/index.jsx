@@ -1,7 +1,7 @@
 import * as S from './style';
-import * as C from '../../components';
 import data from '../../data/data.json';
 import { Input } from '@chakra-ui/react';
+import { Button } from '../../components';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -51,11 +51,21 @@ const Quiz = () => {
                     onChange={(e) => setInput(e.target.value)}
                     placeholder="정답을 입력해주세요"
                   />
-                  <S.Button onClick={() => checkAnswer({ answer })}>
-                    입력
-                  </S.Button>
+                  <Button
+                    width="80px"
+                    height="10px"
+                    fontSize="16px"
+                    content="확인"
+                    onClick={() => checkAnswer({ answer })}
+                  />
                 </S.InputContainer>
-                <S.Button onClick={clickHint}>힌트</S.Button>
+                <Button
+                  width="100px"
+                  height="60px"
+                  fontSize="20px"
+                  content="힌트"
+                  onClick={clickHint}
+                />
                 <S.Hint>{showHint && hint}</S.Hint>
               </S.QuizContainer>
             );

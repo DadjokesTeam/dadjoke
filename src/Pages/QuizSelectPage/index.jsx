@@ -1,5 +1,5 @@
 import * as S from './style';
-import * as C from '../../components';
+import { Button } from '../../components';
 import { Link } from 'react-router-dom';
 
 const Quiz = () => {
@@ -17,7 +17,12 @@ const Quiz = () => {
           {arr.map(({ id, content }) => {
             return (
               <Link to={`/quiz/${id}/1`}>
-                <C.Button content={content} />
+                <Button
+                  width="300px"
+                  height="100px"
+                  content={content}
+                  fontSize="30px"
+                />
               </Link>
             );
           })}

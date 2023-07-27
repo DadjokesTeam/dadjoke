@@ -12,6 +12,7 @@ function App() {
         <Route path="/picture" element={<P.PicturePage />} />
         <Route path="/quiz/:levelId/:quizId" element={<P.Quiz />} />
         <Route path='/human/:humanNum' element={<P.HumanQuiz />} />
+        <Route path="/balance/:id" element={<P.Balance />} />
       </Routes>
     </BrowserRouter>
   );
