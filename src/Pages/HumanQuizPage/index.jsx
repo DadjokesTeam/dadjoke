@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Input } from "@chakra-ui/react";
-import { Button } from '../../components';
+import { Button } from "../../components";
 import * as S from "./style";
 
 const HumanQuiz = () => {
@@ -9,26 +9,45 @@ const HumanQuiz = () => {
   const params = useParams();
   const [input, setInput] = useState();
   const [currentImage, setCurrentImage] = useState("");
-  const [answer, setAnswer] = useState("");
 
   const imageNames = [
     "김민재.png",
     "김원욱.png",
     "전예빈.png",
+    "이현준 김종한.jpg",
     "변도진.jpg",
+    "이태훈.jpg",
     "최민욱.png",
-    "김종한.jpg",
+    "정민서 서주미.jpg",
     "양승권.jpg",
+    "이정우.jpg",
     "오영기.png",
   ];
 
-  const checkAnswer = ({ answer }) => {
-    if (answer === input) {
-      if (params.humanNum === "8") {
+  const answers = [
+    ["김민재"],
+    ["김원욱"],
+    ["전예빈"],
+    ["이현준", "김종한", "이현준 김종한"],
+    ["변도진"],
+    ["이태훈"],
+    ["최민욱"],
+    ["정민서", "서주미", "정민서 서주미"],
+    ["양승권", "알감자"],
+    ["이정우"],
+    ["오영기"],
+  ];
+
+  const checkAnswer = () => {
+    if (answers[params.humanNum - 1].includes(input)) {
+      if (params.humanNum === "11") {
         return navigate("/score");
       }
       navigate(`/human/${Number(params.humanNum) + 1}`);
-    } else alert("틀렸습니다");
+    } else {
+      console.log(answers[params.humanNum - 1]);
+    }
+
     setInput("");
   };
 
@@ -39,7 +58,6 @@ const HumanQuiz = () => {
       Number(params.humanNum) <= imageNames.length
     ) {
       setCurrentImage(`/imgs/${imageNames[Number(params.humanNum) - 1]}`);
-      setAnswer(imageNames[Number(params.humanNum) - 1].split(".")[0]);
     } else {
       setCurrentImage("");
     }
@@ -69,7 +87,7 @@ const HumanQuiz = () => {
           height="50px"
           fontSize="20px"
           content="확인"
-          onClick={() => checkAnswer({ answer })}
+          onClick={() => checkAnswer()}
         />
       </S.InputContainer>
     </S.Container>
