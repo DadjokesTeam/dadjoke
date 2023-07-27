@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Input } from "@chakra-ui/react";
-import { Button } from '../../components';
+import { Button } from "../../components";
 import * as S from "./style";
 
 const HumanQuiz = () => {
@@ -9,22 +9,23 @@ const HumanQuiz = () => {
   const params = useParams();
   const [input, setInput] = useState();
   const [currentImage, setCurrentImage] = useState("");
-  const [answer, setAnswer] = useState("");
+  const [answer, setAnswer] = useState([]);
 
   const imageNames = [
     "김민재.png",
     "김원욱.png",
     "전예빈.png",
+    "이현준 김종한.jpg",
     "변도진.jpg",
     "최민욱.png",
-    "김종한.jpg",
+    "정민서 서주미.jpg",
     "양승권.jpg",
     "오영기.png",
   ];
 
   const checkAnswer = ({ answer }) => {
     if (answer === input) {
-      if (params.humanNum === "8") {
+      if (params.humanNum === "9") {
         return navigate("/score");
       }
       navigate(`/human/${Number(params.humanNum) + 1}`);
