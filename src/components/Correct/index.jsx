@@ -7,16 +7,15 @@ const Correct = (props) => {
   const handleClick = () => {
     alert("정답입니다 !");
     setIsVisible(false);
-    props.onScoreUpdate(5);
+    props.onCorrectClick(props.id); // Use the onCorrectClick prop instead of onScoreUpdate
   };
 
   return (
     <div>
       {isVisible && (
-        <S.Correct
-          onClick={handleClick}
-          className={props.className}
-        ></S.Correct>
+        <S.Correct onClick={handleClick} className={props.className}>
+          {props.id}
+        </S.Correct>
       )}
     </div>
   );

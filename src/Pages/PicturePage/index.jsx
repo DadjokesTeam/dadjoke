@@ -1,5 +1,6 @@
 import * as S from "./style";
 import { Correct } from "../../components";
+import { Counter } from "../../components";
 import React, { useState, useEffect } from "react";
 const PicturePage = () => {
   const correct = [
@@ -18,30 +19,52 @@ const PicturePage = () => {
     { component: Correct, id: 13 },
     { component: Correct, id: 14 },
   ];
+
   const [score, setScore] = useState(0);
+  const [chance, setChance] = useState(10);
   const handleScoreUpdate = (amount) => {
     setScore((prevScore) => prevScore + amount);
   };
 
+  const handleCorrectClick = (clickedId) => {
+    correct.forEach((item) => {
+      if (item.id === clickedId) {
+        item.component = null;
+      }
+    });
+    setScore((prevScore) => prevScore + 5);
+  };
+  const handleChance = () => {
+    window.localStorage.setItem("score", score);
+    setChance((prev) => prev - 1);
+    if (chance === 0) {
+      alert("모든 기회가 소진되었습니다");
+    }
+  };
   return (
     <S.PicturePage>
       <S.Container>
+        <S.Chance>남은 기회 : {chance}</S.Chance>
         <S.Score>score : {score}</S.Score>
         <S.ImgContainer>
           <img src="imgs/옴팡이.png" alt="옴팡이" />
         </S.ImgContainer>
-        <S.ImgPicker>
+        <S.ImgPicker onClick={handleChance}>
           {correct.map(({ component: Component, id }) => {
             return (
-              <Component
-                id={id}
-                className={`number${id}`}
-                key={id}
-                onScoreUpdate={handleScoreUpdate}
-              />
+              Component && (
+                <Component
+                  id={id}
+                  className={`number${id}`}
+                  key={id}
+                  onScoreUpdate={handleScoreUpdate} // Ensure this line is added to pass the function
+                  onCorrectClick={handleCorrectClick}
+                />
+              )
             );
           })}
         </S.ImgPicker>
+        <Counter />
       </S.Container>
     </S.PicturePage>
   );
