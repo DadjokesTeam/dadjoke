@@ -13,7 +13,7 @@ const Select = () => {
           <Button content="아재개그 퀴즈 하기" />
         </Link>
         <S.SelectMessage>or</S.SelectMessage>
-        <Link to="/find">
+        <Link to="/picture">
           <Button content="틀린그림찾기 하기" />
         </Link>
       </S.ButtonContainer>
