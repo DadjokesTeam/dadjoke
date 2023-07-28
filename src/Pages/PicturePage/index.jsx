@@ -42,7 +42,6 @@ const PicturePage = () => {
     window.localStorage.setItem('score', score);
     setChance((prev) => prev - 1);
     setScore((prev) => prev - 2);
-    alert('땡!');
     if (chance === 0) {
       alert('모든 기회가 소진되었습니다');
       navigate('/score');

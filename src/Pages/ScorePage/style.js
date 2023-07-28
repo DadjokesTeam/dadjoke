@@ -16,6 +16,8 @@ export const MainTitle = styled.h2`
   font-weight: 900;
   text-align: center;
   color: white;
+  color: black;
+  font-family: "DungGeunMo";
 `;
 
 export const Score = styled.h1`
