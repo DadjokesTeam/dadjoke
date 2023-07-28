@@ -1,8 +1,8 @@
-import * as S from "./style";
-import { Correct } from "../../components";
-import { Counter } from "../../components";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import * as S from './style';
+import { Correct } from '../../components';
+import { Counter } from '../../components';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 const PicturePage = () => {
   const navigate = useNavigate();
   const correctList = [
@@ -35,17 +35,17 @@ const PicturePage = () => {
     setScore((prevScore) => prevScore + 5);
     setCorrect((prev) => prev - 1);
     if (correct === 0) {
-      navigate("/score");
+      navigate('/score');
     }
   };
   const handleChance = () => {
-    window.localStorage.setItem("score", score);
+    window.localStorage.setItem('score', score);
     setChance((prev) => prev - 1);
     setScore((prev) => prev - 2);
-    alert("땡!");
+    alert('땡!');
     if (chance === 0) {
-      alert("모든 기회가 소진되었습니다");
-      navigate("/score");
+      alert('모든 기회가 소진되었습니다');
+      navigate('/score');
     }
   };
   return (
