@@ -1,3 +1,5 @@
+// HumanQuiz.js
+
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Input } from "@chakra-ui/react";
@@ -7,8 +9,9 @@ import * as S from "./style";
 const HumanQuiz = () => {
   const navigate = useNavigate();
   const params = useParams();
-  const [input, setInput] = useState();
+  const [input, setInput] = useState("");
   const [currentImage, setCurrentImage] = useState("");
+  const [score, setScore] = useState(0);
 
   const imageNames = [
     "김민재.png",
@@ -39,12 +42,16 @@ const HumanQuiz = () => {
   ];
 
   const checkAnswer = () => {
+    setScore((prev) => prev + 5);
     if (answers[params.humanNum - 1].includes(input)) {
       if (params.humanNum === "11") {
+        // 마지막 문제일 경우 점수 화면으로 이동
         return navigate("/score");
       }
+      // 정답일 경우 점수를 5 증가시키고 다음 문제로 이동
       navigate(`/human/${Number(params.humanNum) + 1}`);
     } else {
+      setScore((prev) => prev - 10);
       console.log(answers[params.humanNum - 1]);
     }
 
@@ -62,10 +69,11 @@ const HumanQuiz = () => {
       setCurrentImage("");
     }
   }, [params.humanNum]);
-  
+
   return (
     <S.Container>
       <S.Title>우리학교 인물퀴즈</S.Title>
+      <S.Score>{score}</S.Score>
       <S.ImgContainer>
         {currentImage && (
           <img

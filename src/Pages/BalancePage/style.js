@@ -71,3 +71,10 @@ export const Option = styled.div`
     transition: all 0.3s;
   }
 `;
+
+export const Score = styled.div`
+  font-size: 50px;
+  font-family: "DungGeunMo";
+  position: absolute;
+  top: 200px;
+`;

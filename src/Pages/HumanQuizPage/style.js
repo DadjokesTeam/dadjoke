@@ -43,3 +43,8 @@ export const InputContainer = styled.div`
   padding: 0 16px;
   gap: 8px;
 `;
+
+export const Score = styled.div`
+  font-size: 50px;
+  font-family: "DungGeunMo";
+`;
