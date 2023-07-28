@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Main = styled.div`
   width: 100vw;
@@ -15,7 +15,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: "DungGeunMo";
+  font-family: 'DungGeunMo';
   width: 400px;
   height: 200px;
   display: flex;
@@ -24,7 +24,7 @@ export const Title = styled.h1`
   font-size: 32px;
   color: black;
   text-align: center;
-  margin-top: 350px;
+  margin-top: 100px;
   border: 3px solid black;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 `;
@@ -46,7 +46,7 @@ export const OptionContainer = styled.div`
     font-size: 60px;
     font-weight: 700;
     color: black;
-    font-family: "DungGeunMo";
+    font-family: 'DungGeunMo';
   }
 `;
 
@@ -60,7 +60,7 @@ export const Option = styled.div`
   font-size: 30px;
   font-weight: 600;
   cursor: pointer;
-  font-family: "DungGeunMo";
+  font-family: 'DungGeunMo';
   border: 3px solid black;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
   color: white;
