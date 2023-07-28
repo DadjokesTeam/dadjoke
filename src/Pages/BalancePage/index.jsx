@@ -1,21 +1,24 @@
-import * as S from './style';
-import data from '../../data/balance.json';
-import { useParams, useNavigate } from 'react-router-dom';
+import * as S from "./style";
+import data from "../../data/balance.json";
+import { useParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Balance = () => {
   const params = useParams();
   const navigate = useNavigate();
-
+  const [score, setScore] = useState(0);
   const checkAnswer = (option, answer) => {
     if (answer === option) {
-      if (params.id === '10') {
-        navigate('/score');
-        return;
-      }
-      navigate(`/balance/${Number(params.id) + 1}`);
+      setScore((prev) => prev + 5);
     } else {
-      alert('땡!');
+      setScore((prev) => prev - 5);
+      alert("땡!");
     }
+    if (params.id === "10") {
+      navigate("/score");
+      return;
+    }
+    navigate(`/balance/${Number(params.id) + 1}`);
   };
   return (
     <S.Main>
@@ -26,6 +29,7 @@ const Balance = () => {
             return (
               <S.ContentContainer key={id}>
                 <S.Title>{desc}</S.Title>
+                <S.Score>{score}</S.Score>
                 <S.OptionContainer>
                   <S.Option onClick={() => checkAnswer(option1, answer, id)}>
                     {option1}

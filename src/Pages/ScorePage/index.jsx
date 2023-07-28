@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import * as S from './style';
-import { Button } from '../../components';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import * as S from "./style";
+import { Button } from "../../components";
+import { Link } from "react-router-dom";
 
 const Score = ({ subject }) => {
-  const score = window.localStorage.getItem("quizScore");
+  const score = window.localStorage.getItem("score");
 
   return (
     <S.Container>
