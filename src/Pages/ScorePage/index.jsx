@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import * as S from "./style";
-import { Button } from "../../components";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import * as S from './style';
+import { Button } from '../../components';
+import { Link } from 'react-router-dom';
 
 const Score = ({ subject }) => {
-  const score = window.localStorage.getItem("score");
+  const score = window.localStorage.getItem('score');
 
   return (
     <S.Container>
@@ -26,6 +26,9 @@ const Score = ({ subject }) => {
           height="100px"
           fontSize="30px"
           content="처음으로 돌아가기"
+          onClick={() => {
+            localStorage.clear();
+          }}
         />
       </Link>
     </S.Container>
