@@ -8,7 +8,7 @@ const Score = ({ subject }) => {
 
   return (
     <S.Container>
-      <S.MainTitle>당신의 {subject} 의 점수는</S.MainTitle>
+      <S.MainTitle>당신의 점수는</S.MainTitle>
       <S.Score>{score}</S.Score>
       <S.Congratuation></S.Congratuation>
       {score >= 150 ? (
