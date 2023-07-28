@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 export const PicturePage = styled.div`
   width: 100vw;
   height: 100vh;
@@ -22,16 +22,16 @@ export const ImgContainer = styled.div`
 
 export const Score = styled.div`
   font-size: 50px;
-  font-family: "DungGeunMo";
+  font-family: 'DungGeunMo';
   position: absolute;
-  top: 200px;
+  top: 120px;
 `;
 
 export const Chance = styled.div`
   font-size: 50px;
-  font-family: "DungGeunMo";
+  font-family: 'DungGeunMo';
   position: absolute;
-  top: 160px;
+  top: 70px;
 `;
 
 export const ImgPicker = styled.div`

@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const Counter = styled.div`
   font-family: sans-serif;
@@ -6,7 +6,7 @@ export const Counter = styled.div`
   height: 100vh;
   place-items: center;
   position: absolute;
-  right: 1000px;
+  right: 835px;
   bottom: -300px;
   .base-timer {
     position: absolute;
@@ -59,6 +59,6 @@ export const Counter = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 30px;
-    font-family: "DungGeunMo";
+    font-family: 'DungGeunMo';
   }
 `;
