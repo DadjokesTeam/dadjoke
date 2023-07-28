@@ -23,7 +23,7 @@ const PicturePage = () => {
   ];
 
   const [score, setScore] = useState(0);
-  const [correct, setCorrect] = useState(7);
+  const [correct, setCorrect] = useState(6);
   const [chance, setChance] = useState(10);
 
   const handleCorrectClick = (clickedId) => {
