@@ -15,6 +15,8 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
+  position: absolute;
+  top: 15px;
   font-family: 'DungGeunMo';
   width: 400px;
   height: 200px;
@@ -74,7 +76,7 @@ export const Option = styled.div`
 
 export const Score = styled.div`
   font-size: 50px;
-  font-family: "DungGeunMo";
+  font-family: 'DungGeunMo';
   position: absolute;
-  top: 200px;
+  bottom: 100px;
 `;
