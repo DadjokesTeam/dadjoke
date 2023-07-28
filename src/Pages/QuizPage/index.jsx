@@ -12,7 +12,6 @@ const Quiz = () => {
   const [input, setInput] = useState("");
   const [score, setScore] = useState(0);
 
-  // 이전에 저장된 점수를 로컬스토리지에서 읽어옵니다.
   useEffect(() => {
     const savedScore = localStorage.getItem("score");
     if (savedScore !== null) {
@@ -20,8 +19,8 @@ const Quiz = () => {
     }
   }, []);
 
-  // useEffect를 사용하여 score가 변경될 때마다 로컬스토리지에 저장합니다.
   useEffect(() => {
+    localStorage.clear();
     localStorage.setItem("score", score);
   }, [score]);
 

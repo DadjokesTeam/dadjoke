@@ -40,21 +40,16 @@ const HumanQuiz = () => {
     ["이정우"],
     ["오영기"],
   ];
-
   const checkAnswer = () => {
     setScore((prev) => prev + 5);
     if (answers[params.humanNum - 1].includes(input)) {
       if (params.humanNum === "11") {
-        // 마지막 문제일 경우 점수 화면으로 이동
         return navigate("/score");
       }
-      // 정답일 경우 점수를 5 증가시키고 다음 문제로 이동
       navigate(`/human/${Number(params.humanNum) + 1}`);
     } else {
-      setScore((prev) => prev - 10);
-      console.log(answers[params.humanNum - 1]);
+      navigate(`/human/${Number(params.humanNum) + 1}`);
     }
-
     setInput("");
   };
 
